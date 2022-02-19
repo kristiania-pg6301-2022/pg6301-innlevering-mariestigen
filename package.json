@@ -4,6 +4,8 @@
   "description": "Innlevering av Christian Gregersen og Marie Stigen for Webutvikling og API-design",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier --write **/*.{js,jsx,ts,tsx}",
+    "prettier:check": "prettier --check **/*.{js,jsx,ts,tsx}",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen/issues"
   },
-  "homepage": "https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen#readme"
+  "homepage": "https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen#readme",
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
 }
