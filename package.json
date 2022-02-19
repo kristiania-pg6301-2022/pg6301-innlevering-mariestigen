@@ -1,0 +1,27 @@
+{
+  "name": "pg6301-innlevering",
+  "version": "1.0.0",
+  "description": "Innlevering av Christian Gregersen og Marie Stigen for Webutvikling og API-design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen.git"
+  },
+  "keywords": [
+    "innlevering",
+    "web",
+    "api",
+    "pg6301",
+    "react",
+    "express"
+  ],
+  "author": "Christian Gregersen & Marie Stigen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen/issues"
+  },
+  "homepage": "https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen#readme"
+}
