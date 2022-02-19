@@ -48,6 +48,6 @@ _For å få vurdert innleveringen dere løse den med følgende GitHub classroom 
 - [ ] Sette opp Github Actions mot repoet (+ Jest)
 - [ ] Sette opp Coveralls mot github-repoet
 - [ ] Sette opp Express-server
-- [ ] Sette opp Heroku mot github-repoet
+- [ ] Sette opp Heroku mot github-repoet 
 
 
