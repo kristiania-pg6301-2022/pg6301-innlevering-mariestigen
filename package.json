@@ -6,7 +6,7 @@
   "scripts": {
     "prettier": "prettier --write **/*.{js,jsx,ts,tsx}",
     "prettier:check": "prettier --check **/*.{js,jsx,ts,tsx}",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "concurrently npm:dev:client npm:dev:server",
     "dev:server": "cd client && npm run dev",
     "dev:client": "cd server && npm run dev",
@@ -43,7 +43,9 @@
     "eslint": "^8.9.0",
     "eslint-plugin-react": "^7.28.0",
     "husky": "^7.0.4",
-    "prettier": "^2.5.1"
+    "jest": "^27.5.1",
+    "prettier": "^2.5.1",
+    "supertest": "^6.2.2"
   },
   "engines": {
     "node": "^17.4.0",
