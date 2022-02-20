@@ -1,4 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/kristiania-pg6301-2022/pg6301-innlevering-mariestigen/badge.svg?branch=main)](https://coveralls.io/github/kristiania-pg6301-2022/pg6301-innlevering-mariestigen?branch=main)
+[![Run tests](https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen/actions/workflows/test.yml/badge.svg)](https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen/actions/workflows/test.yml)
 
 # pg6301-innlevering-mariestigen
 pg6301-innlevering-mariestigen created by GitHub Classroom
