@@ -4,7 +4,6 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel watch index.html",
     "build": "npm install --include=dev && parcel build index.html"
   },
@@ -12,8 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.3.2",
-    "stream-http": "^3.2.0"
+    "parcel": "^2.3.2"
   },
   "dependencies": {
     "react": "^17.0.2",
