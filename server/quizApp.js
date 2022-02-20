@@ -14,3 +14,18 @@ QuizApp.get("/question", (req, res) => {
 
     res.json({question,answers,id});
 });
+
+QuizApp.post("/answer", (req, res) => {
+    const {id, answer} = req.body;
+    const question = Questions.find((q) => q.id === id);
+
+    if(!question){
+        return res.sendStatus(404);
+    }
+
+    if(isCorrectAnswer(question, answer)){
+        return res.json({result: "correct"});
+    } else {
+        return res.json({result: "incorrect"});
+    }
+});

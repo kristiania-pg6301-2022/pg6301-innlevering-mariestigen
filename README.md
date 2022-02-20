@@ -34,20 +34,20 @@ Dere kan ta utgangspunkt i følgende eksempel på spørsmål, men dere må endre
 
 _For å få vurdert innleveringen dere løse den med følgende GitHub classroom og alle gruppedeltagerne skal levere link i Canvas: https://classroom.github.com/a/lCmgaF2I_
 
-- [ ] Sette opp et React-prosjekt
-- [ ] Legge til Parcel, React, React-router, React-router-dom
+- [x] Sette opp et React-prosjekt
+- [x] Legge til Parcel, React, React-router, React-router-dom
   - [ ] Lage en hovedside
   - [ ] Lage en underside som viser spm
     - [ ] Routes videre til right/wrong basert på svar
     - [ ] Lagre informasjon om hvor mange rett/galt man har svart
     - [ ] Lage nytt spm
 
-- [ ] Legge til Babel /m React-support 
-- [ ] Legge til Jest
+- [x] Legge til Babel /m React-support 
+- [x] Legge til Jest
    - [ ] Lage tester
 - [ ] Sette opp Github Actions mot repoet (+ Jest)
 - [ ] Sette opp Coveralls mot github-repoet
-- [ ] Sette opp Express-server
-- [ ] Sette opp Heroku mot github-repoet 
+- [x] Sette opp Express-server
+- [x] Sette opp Heroku mot github-repoet 
 
 
