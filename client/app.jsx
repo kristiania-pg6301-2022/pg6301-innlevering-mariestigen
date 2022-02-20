@@ -1,15 +1,9 @@
-import React, {useState} from "react";
-import {fetchJSON, postJSON} from "http.js";
-import {useLoader} from "useLoader.js";
+import React, { useState } from "react";
+import { fetchJSON, postJSON } from "http.js";
+import { useLoader } from "useLoader.js";
 
-function showQuestion({question, onReload}){
+function showQuestion({ question, onReload }) {}
 
-}
+function QuestionComponent({ reload }) {}
 
-function QuestionComponent({reload}){
-
-}
-
-export function App(){
-
-}
+export function App() {}
