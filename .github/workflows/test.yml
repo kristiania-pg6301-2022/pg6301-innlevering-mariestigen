@@ -3,7 +3,7 @@ name: Run tests
 on:
   push:
     branches:
-      - exercise/answer/*
+      - main
 jobs:
   test:
     runs-on: ubuntu-latest
