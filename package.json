@@ -14,7 +14,7 @@
     "dev:client": "cd server && npm run dev",
     "prepare": "husky install",
     "pre-commit": "npm run prettier:check",
-    "build": "npm run build:server && npm run build:client",
+    "build": "npm install && npm run build:server && npm run build:client",
     "build:server": "cd server && npm run build",
     "build:client": "cd client && npm run build",
     "start": "cd server && npm start"
