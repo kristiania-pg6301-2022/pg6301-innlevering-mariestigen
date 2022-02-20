@@ -18,5 +18,5 @@ jobs:
       - uses: coverallsapp/github-action@master
         with:
           path-to-lcov: ${{ github.workspace }}/coverage/lcov.info
-          base-path: /
+          base-path: ./
           github-token: ${{ secrets.GITHUB_TOKEN }}
