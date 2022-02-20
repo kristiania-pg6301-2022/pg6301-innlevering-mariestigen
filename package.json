@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Innlevering av Christian Gregersen og Marie Stigen for Webutvikling og API-design",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "prettier": "prettier --write **/*.{js,jsx,ts,tsx}",
     "prettier:check": "prettier --check **/*.{js,jsx,ts,tsx}",
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js ",
     "dev": "concurrently npm:dev:client npm:dev:server",
     "dev:server": "cd client && npm run dev",
     "dev:client": "cd server && npm run dev",
@@ -46,6 +47,18 @@
     "jest": "^27.5.1",
     "prettier": "^2.5.1",
     "supertest": "^6.2.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   },
   "engines": {
     "node": "^17.4.0",
