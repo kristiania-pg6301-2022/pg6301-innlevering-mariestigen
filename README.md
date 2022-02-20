@@ -54,3 +54,6 @@ _For å få vurdert innleveringen dere løse den med følgende GitHub classroom 
 - [x] Sette opp Heroku mot github-repoet 
 
 
+###
+notes
+[ ] Husky doesn't need with coverage to run

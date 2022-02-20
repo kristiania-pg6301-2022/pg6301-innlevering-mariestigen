@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { fetchJSON, postJSON } from "http.js";
-import { useLoader } from "useLoader.js";
+import { fetchJSON, postJSON } from "http";
+import { useLoader } from "useLoader";
 
 function showQuestion({ question, onReload }) {}
 
