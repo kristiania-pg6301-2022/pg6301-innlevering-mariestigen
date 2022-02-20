@@ -5,7 +5,7 @@ import { useLoader } from "./useLoader.jsx";
 function ShowQuestion({ question, onReload }) {
     async function handleAnswer(answer){
         const {id} = question;
-        await postJSON("/api/answer", {id, answer})
+        postJSON("/api/answer", {id, answer})
         onReload();
     }
 
@@ -55,9 +55,9 @@ export function App() {
     } = useLoader(async () => fetchJSON("api/score"));
 
     return (
-        <>
-            <H1>WELCOME TO KVISS!</H1>
+        <div>
+            <h1>WELCOME TO KVISS!</h1>
             <QuestionComponent reload={reload} />
-        </>
+        </div>
     );
 }
