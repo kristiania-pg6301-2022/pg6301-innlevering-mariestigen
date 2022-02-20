@@ -15,7 +15,8 @@
     "dev:client": "cd server && npm run dev",
     "prepare": "husky install",
     "pre-commit": "npm run prettier:check",
-    "build": "npm install && npm run build:server && npm run build:client",
+    "build": "npm run build:root && npm run build:server && npm run build:client",
+    "build:root": "npm install --include=dev",
     "build:server": "cd server && npm run build",
     "build:client": "cd client && npm run build",
     "start": "cd server && npm start"
@@ -38,6 +39,9 @@
     "url": "https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen/issues"
   },
   "homepage": "https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen#readme",
+  "dependencies": {
+    "husky": "^7.0.4"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
@@ -45,7 +49,6 @@
     "concurrently": "^7.0.0",
     "eslint": "^8.9.0",
     "eslint-plugin-react": "^7.28.0",
-    "husky": "^7.0.4",
     "jest": "^27.5.1",
     "prettier": "^2.5.1",
     "supertest": "^6.2.2"
