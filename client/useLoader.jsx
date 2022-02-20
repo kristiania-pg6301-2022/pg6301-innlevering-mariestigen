@@ -18,6 +18,5 @@ export function useLoader(loadingFn){
         }
     }
 
-
     return {loading, error, data, reload};
 }
