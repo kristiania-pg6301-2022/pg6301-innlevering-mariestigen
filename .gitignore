@@ -9,3 +9,4 @@
 /.idea/
 coverage/
 dist/
+.parcel-cache/

@@ -7,14 +7,11 @@
   "scripts": {
     "prettier": "prettier --write **/*.{js,jsx,ts,tsx}",
     "prettier:check": "prettier --check **/*.{js,jsx,ts,tsx}",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --collectCoverage",
-    "verify": "npm run prettier:check && npm run test:coverage",
+    "verify": "npm run prettier:check",
     "dev": "concurrently npm:dev:client npm:dev:server",
     "dev:server": "cd client && npm run dev",
     "dev:client": "cd server && npm run dev",
     "prepare": "husky install",
-    "pre-commit": "npm run prettier:check",
     "build": "npm run build:root && npm run build:server && npm run build:client",
     "build:root": "npm install --include=dev",
     "build:server": "cd server && npm run build",
@@ -43,30 +40,11 @@
     "husky": "^7.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "babel-jest": "^27.5.1",
     "concurrently": "^7.0.0",
     "eslint": "^8.9.0",
     "eslint-plugin-react": "^7.28.0",
-    "jest": "^27.5.1",
     "parcel": "^2.3.2",
-    "prettier": "^2.5.1",
-    "supertest": "^6.2.2"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react",
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
+    "prettier": "^2.5.1"
   },
   "engines": {
     "node": "16.x",
