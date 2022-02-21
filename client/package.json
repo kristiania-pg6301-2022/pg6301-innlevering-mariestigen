@@ -19,6 +19,9 @@
     "jest": "^27.5.1",
     "parcel": "^2.3.2"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "babel": {
     "presets": [
       "@babel/preset-react",
