@@ -1,8 +1,8 @@
-import express from "../server/node_modules/express/index.js";
-import bodyParser from "../server/node_modules/body-parser/index.js";
-import cookieParser from "../server/node_modules/cookie-parser/index.js";
+import express from "express";
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 import request from "supertest";
-import { QuizApp } from "../server/quizApp.js";
+import { QuizApp } from "../quizApp.js";
 
 const app = express();
 app.use(bodyParser.json());
