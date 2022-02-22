@@ -5,9 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "lcov": "lcov-result-merger **/coverage/lcov.info coverage/lcov.info",
     "prettier": "prettier --write **/*.{js,jsx,ts,tsx}",
     "prettier:check": "prettier --check **/*.{js,jsx,ts,tsx}",
-    "verify": "npm run prettier:check && npm run verify:server",
+    "verify": "npm run prettier:check && npm run verify:server && npm run verify:client && npm run lcov",
     "verify:client": "cd client && npm run test:coverage",
     "verify:server": "cd server && npm run test:coverage",
     "dev": "concurrently npm:dev:client npm:dev:server",
@@ -45,6 +46,7 @@
     "concurrently": "^7.0.0",
     "eslint": "^8.9.0",
     "eslint-plugin-react": "^7.28.0",
+    "lcov-result-merger": "^3.1.0",
     "parcel": "^2.3.2",
     "prettier": "^2.5.1"
   },
