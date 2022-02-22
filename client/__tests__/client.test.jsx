@@ -26,6 +26,7 @@ afterEach(() => {
   container.remove();
   container = null;
 });
+
 function setupFetchStub(data) {
   return function fetchStub(_url) {
     return new Promise((resolve) => {
