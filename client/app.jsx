@@ -10,8 +10,8 @@ export function ShowQuestion({ question, onReload }) {
   }
 
   return (
-    <div id={"question-container"}>
-      <h2>{question.question}</h2>
+    <div>
+      <h2 id={"question-header"}>{question.question}</h2>
       {Object.keys(question.answers).map((a) => (
         <div key={a}>
           <button onClick={() => handleAnswer(a)}>{question.answers[a]}</button>
@@ -25,6 +25,7 @@ export function QuestionComponent({ reload }) {
   const [question, setQuestion] = useState();
 
   async function handleLoadQuestion() {
+    console.log("click!");
     const res = await fetch("api/question");
     setQuestion(await res.json());
   }

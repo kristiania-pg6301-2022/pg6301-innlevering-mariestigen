@@ -15,6 +15,7 @@ const fakeQuestion = {
     answer_d: 'document.getElementByName("p").innerHTML = "Hello World!";',
   },
 };
+
 beforeEach(() => {
   container = document.createElement("div");
   document.body.appendChild(container);
@@ -27,35 +28,19 @@ afterEach(() => {
   container = null;
 });
 
-function setupFetchStub(data) {
-  return function fetchStub(_url) {
-    return new Promise((resolve) => {
-      resolve({
-        json: () =>
-          Promise.resolve({
-            data,
-          }),
-      });
-    });
-  };
-}
 describe("Tests for client", () => {
   it("Should render a question", async () => {
-    jest
-      .spyOn(global, "fetch")
-      .mockImplementation(setupFetchStub(fakeQuestion));
-
-    await act(async () => {
-      //const setLoadQuestion = jest.fn();
-
-      render(<App />, container);
-    });
-
-    Simulate.click(container.querySelector("#load-question-btn"));
-    expect(container.querySelector("#question-container h2").textContent).toBe(
-      fakeQuestion.question
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(fakeQuestion),
+      })
     );
-
+    await act(async () => {
+      render(<App />, container);
+      Simulate.click(container.querySelector("button"));
+    });
+    const header = container.querySelector("h2");
+    expect(header.textContent).toBe(fakeQuestion.question);
     global.fetch.mockRestore();
   });
 });
