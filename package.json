@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lcov": "lcov-result-merger **/coverage/lcov.info coverage/lcov.info",
+    "lcov": "lcov-result-merger **/coverage/lcov.info lcov.info",
     "prettier": "prettier --write **/*.{js,jsx,ts,tsx}",
     "prettier:check": "prettier --check **/*.{js,jsx,ts,tsx}",
     "verify": "npm run prettier:check && npm run verify:server && npm run verify:client && npm run lcov",
