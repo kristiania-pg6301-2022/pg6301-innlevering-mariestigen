@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { fetchJSON, postJSON } from "./http.jsx";
 import { useLoader } from "./useLoader.jsx";
 
@@ -48,6 +49,15 @@ export function QuestionComponent({ reload }) {
   return <ShowQuestion question={question} onReload={handleReload} />;
 }
 
+function MainPage(props) {
+  return (
+    <div>
+      <h1>WELCOME TO KVISS!</h1>
+      <QuestionComponent reload={props.reload} />
+    </div>
+  );
+}
+
 export function App() {
   const {
     data: score,
@@ -56,9 +66,13 @@ export function App() {
   } = useLoader(async () => fetchJSON("api/score"));
 
   return (
-    <div>
-      <h1>WELCOME TO KVISS!</h1>
-      <QuestionComponent reload={reload} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path={"/"} element={<MainPage reload={reload} />} />
+        <Route path={"/correct"} element={<h1>Correct answer!</h1>} />
+        <Route path={"/wrong"} element={<h1>Wrong answer!</h1>} />
+        <Route path={"/*"} element={<h1>not found!</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
 }

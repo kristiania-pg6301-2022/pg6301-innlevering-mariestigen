@@ -46,7 +46,7 @@
     "concurrently": "^7.0.0",
     "eslint": "^8.9.0",
     "eslint-plugin-react": "^7.28.0",
-    "lcov-result-merger": "^3.1.0",
+    "lcov-result-merger": "^1.0.2",
     "parcel": "^2.3.2",
     "prettier": "^2.5.1"
   },
