@@ -22,9 +22,13 @@ describe("Tests for questions", () => {
 
 describe("Tests for answers", () => {
   it("Should return correct or incorrect for answer", async () => {
-    await request(app)
+    const agent = request.agent(app);
+
+    const res = await agent
       .post("/api/answer")
       .send({ id: 974, answer: "answer_b" })
       .expect({ result: "correct" });
   });
+
+  it("Should return a cookie", () => {});
 });
