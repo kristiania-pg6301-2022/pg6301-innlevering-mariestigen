@@ -52,8 +52,36 @@ export function QuestionComponent({ reload }) {
 function MainPage(props) {
   return (
     <div>
+      <Score />
       <h1>WELCOME TO KVISS!</h1>
       <QuestionComponent reload={props.reload} />
+    </div>
+  );
+}
+
+function CorrectPage(props) {
+  return (
+    <>
+      <Score />
+      <h1>Correct answer!</h1>
+    </>
+  );
+}
+
+function WrongPage(props) {
+  return (
+    <>
+      <Score />
+      <h1>Wrong answer!</h1>
+    </>
+  );
+}
+
+function Score() {
+  return (
+    <div>
+      <p>Correct:</p>
+      <p>Total:</p>
     </div>
   );
 }
@@ -69,8 +97,8 @@ export function App() {
     <BrowserRouter>
       <Routes>
         <Route path={"/"} element={<MainPage reload={reload} />} />
-        <Route path={"/correct"} element={<h1>Correct answer!</h1>} />
-        <Route path={"/wrong"} element={<h1>Wrong answer!</h1>} />
+        <Route path={"/correct"} element={<CorrectPage reload={reload} />} />
+        <Route path={"/wrong"} element={<WrongPage reload={reload} />} />
         <Route path={"/*"} element={<h1>not found!</h1>} />
       </Routes>
     </BrowserRouter>
