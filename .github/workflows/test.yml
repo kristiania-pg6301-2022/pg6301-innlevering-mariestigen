@@ -16,5 +16,5 @@ jobs:
       - run: npm run verify
       - uses: coverallsapp/github-action@master
         with:
-          path-to-lcov: ${{ github.workspace }}/lcov.info
+          path-to-lcov: ${{ github.workspace }}/server/lcov.info
           github-token: ${{ secrets.GITHUB_TOKEN }}
