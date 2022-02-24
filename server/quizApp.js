@@ -26,9 +26,9 @@ QuizApp.post("/answer", (req, res) => {
   }
 
   if (isCorrectAnswer(question, answer)) {
-    // score.score++;
-    // score.answers++;
-    // res.cookie("score", JSON.stringify(score));
+    score.score++;
+    score.answers++;
+    res.cookie("score", JSON.stringify(score));
     return res.json({ result: "correct" });
   } else {
     score.answers++;
