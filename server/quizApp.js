@@ -31,11 +31,11 @@ QuizApp.post("/answer", (req, res) => {
   if (isCorrectAnswer(question, answer)) {
     score.score++;
     score.answers++;
-    res.cookie("score", JSON.stringify(score));
+    res.cookie("score", JSON.stringify(score), { signed: true });
     res.json({ result: "correct" });
   } else {
     score.answers++;
-    res.cookie("score", JSON.stringify(score));
+    res.cookie("score", JSON.stringify(score), { signed: true });
 
     res.json({ result: "incorrect" });
   }
