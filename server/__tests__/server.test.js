@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import request from "supertest";
@@ -30,5 +30,9 @@ describe("Tests for answers", () => {
       .expect({ result: "correct" });
   });
 
-  it("Should return a cookie", () => {});
+  // it("Should keep track of score", async () => {
+  //   const agent = request.agent(app);
+  //   await agent.post("/api/answer").send({ id: 974, answer: "answer_b" });
+  //   await agent.get("/api/score").expect(200).expect({ score: 1, answers: 1 });
+  // });
 });
