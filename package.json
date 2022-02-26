@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "prettier": "prettier --write **/*.{js,jsx,ts,tsx}",
-    "prettier:check": "prettier --check **/*.{js,jsx,ts,tsx}",
+    "prettier": "prettier --write **/*.{js,jsx}",
+    "prettier:check": "prettier --check **/*.{js,jsx}",
     "verify": "npm run prettier:check && npm run verify:server && npm run verify:client",
     "verify:client": "cd client && npm run test:coverage",
     "verify:server": "cd server && npm run test:coverage",
