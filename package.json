@@ -1,0 +1,55 @@
+{
+  "name": "pg6301-innlevering",
+  "version": "1.0.0",
+  "description": "Innlevering av Christian Gregersen og Marie Stigen for Webutvikling og API-design",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "prettier": "prettier --write **/*.{js,jsx}",
+    "prettier:check": "prettier --check **/*.{js,jsx}",
+    "verify": "npm run prettier:check && npm run verify:server && npm run verify:client",
+    "verify:client": "cd client && npm run test:coverage",
+    "verify:server": "cd server && npm run test:coverage",
+    "dev": "concurrently npm:dev:client npm:dev:server",
+    "dev:server": "cd client && npm run dev",
+    "dev:client": "cd server && npm run dev",
+    "prepare": "husky install",
+    "build": "npm run build:root && npm run build:server && npm run build:client",
+    "build:root": "npm install --include=dev",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "start": "cd server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen.git"
+  },
+  "keywords": [
+    "innlevering",
+    "web",
+    "api",
+    "pg6301",
+    "react",
+    "express"
+  ],
+  "author": "Christian Gregersen & Marie Stigen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen/issues"
+  },
+  "homepage": "https://github.com/kristiania-pg6301-2022/pg6301-innlevering-mariestigen#readme",
+  "dependencies": {
+    "husky": "^7.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "eslint": "^8.9.0",
+    "eslint-plugin-react": "^7.28.0",
+    "parcel": "^2.3.2",
+    "prettier": "^2.5.1"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  }
+}
